@@ -21,7 +21,7 @@
 
 ## 🧩 Projetos Relevantes
 - ❤️ [Protótipo site BomGesto](https://github.com/yuifronerd/Prototipo-BomGesto)
-- 🏋️‍♀️ [Sistema de Cadastro para Academia](https://github.com/yuifronerd/cadastro-academia)
+- 🏋️‍♀️ [Sistema de Cadastro para Academia](https://github.com/Kkkkkenji/Project-Academia)
 
 ##
 
