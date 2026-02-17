@@ -1,36 +1,29 @@
-name: Update Profile
+name: Generate Snake
 
 on:
-  schedule:
-    - cron: "0 */6 * * *"
   workflow_dispatch:
 
+permissions:
+  contents: write
+
 jobs:
-  update:
+  build:
     runs-on: ubuntu-latest
 
     steps:
-      # Checkout
       - uses: actions/checkout@v3
 
-      # Summary Cards
-      - uses: vn7n24fzkq/github-profile-summary-cards@release
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          USERNAME: ${{ github.repository_owner }}
-
-      # Snake Animation
       - uses: Platane/snk@v3
         with:
           github_user_name: kkkkkenji
           outputs: dist/github-contribution-grid-snake.svg
 
-      # Deploy
       - uses: crazy-max/ghaction-github-pages@v3
         with:
           target_branch: output
           build_dir: dist
+          force_orphan: true
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
 
